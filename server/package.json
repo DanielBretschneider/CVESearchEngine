@@ -4,22 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint **/*.js",
+    "lint": "eslint",
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "stop": "./node_modules/.bin/eslint **/*.js"
+    "stop": "./node_modules/.bin/eslint src/**/*.js --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-plugin-vue": "^8.5.0",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  },
-  "devDependencies": {
-    "eslint": "^8.10.0",
-    "eslint-plugin-vue": "^8.5.0"
   }
 }
